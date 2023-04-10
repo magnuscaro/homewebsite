@@ -1,3 +1,7 @@
+# This is a project setting up an webapplication for your home.
+
+This is a project exploring setting up an webapplication for your home. This webapplication project main purpose is to check how well ChatGPT and Github CoPilot works with learning new technology, and will be used heavily in this project.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
