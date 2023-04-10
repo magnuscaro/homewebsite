@@ -1,0 +1,75 @@
+/* Add this to the top of your App.css file */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(135deg, #82C9F5 16%, #C7306A 99%);
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0); /* Add a transparent background color */
+  padding: 0 1rem;
+}
+
+.App-header {
+  background-color: rgba(255, 255, 255, 0); /* Add a transparent background color */
+  padding: 1rem 0;
+  color: white;
+  text-align: center;
+}
+
+main {
+  padding: 1rem 0;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.app-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0); /* Add a transparent background color */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.app-icon img {
+  width: 60px; /* Increase the icon width */
+  height: 60px; /* Increase the icon height */
+}
+
+.app-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 480px) {
+  .App {
+    max-width: 480px;
+  }
+  .app-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Increase the minimum column width */
+  }
+}
+
+@media (min-width: 768px) {
+  .App {
+    max-width: 768px;
+  }
+  .app-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Increase the minimum column width */
+  }
+}

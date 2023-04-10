@@ -1,0 +1,167 @@
+/* src/ButtonStyles.css */
+/*
+.myButton {
+    box-shadow: 0px 10px 14px -7px #276873;
+    background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color: #599bb3;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 32px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+  }
+  
+  .myButton:hover {
+    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    background-color: #408c99;
+  }
+  
+  .myButton:active {
+    position: relative;
+    top: 1px;
+  }
+
+*/
+
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+
+:root {
+    --fill-color: #a972cb;
+    --fill-hover: #d3a3f7;
+    --pulse-color: #ef6eae;
+    --pulse-hover: #ff9fd2;
+    --close-color: #ff7f82;
+    --close-hover: #ffadb0;
+    --raise-color: #ffa260;
+    --raise-hover: #ffc28a;
+    --up-color: #e4cb58;
+    --up-hover: #ffef91;
+    --slide-color: #8fc866;
+    --slide-hover: #b3ed93;
+    --offset-color: #19bc8b;
+    --offset-hover: #3be3ac;
+  }
+  
+  button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: var(--color);
+    transition: 0.25s;
+  }
+  
+  button:hover,
+  button:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+  
+  .fill {
+    --color: var(--fill-color);
+    --hover: var(--fill-hover);
+  }
+  
+  .fill:hover,
+  .fill:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+  }
+
+  .pulse {
+    position: relative;
+    overflow: hidden;
+    --color: var(--pulse-color);
+    --hover: var(--pulse-hover);
+  }
+  
+  .pulse:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--hover);
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 0;
+  }
+  
+  .pulse:hover:before,
+  .pulse:focus:before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  
+  
+  
+  .close {
+    --color: var(--close-color);
+    --hover: var(--close-hover);
+  }
+  
+  .close:hover,
+  .close:focus {
+    box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+  }
+  
+  .raise {
+    --color: var(--raise-color);
+    --hover: var(--raise-hover);
+  }
+  
+  .raise:hover,
+  .raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+  }
+  
+  .up {
+    --color: var(--up-color);
+    --hover: var(--up-hover);
+  }
+  
+  .up:hover,
+  .up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+  }
+  
+  .slide {
+    --color: var(--slide-color);
+    --hover: var(--slide-hover);
+  }
+  
+  .slide:hover,
+  .slide:focus {
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+  }
+  
+  .offset {
+    --color: var(--offset-color);
+    --hover: var(--offset-hover);
+  }
+  
+  .offset:hover,
+  .offset:focus {
+    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color), 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+  }
+  

@@ -1,0 +1,24 @@
+  <div className="App">
+      <header className="App-header">
+        <h1>Erik Børresens Allé 23C \n Website</h1>
+      </header>
+      <main>
+        <div className="app-grid">
+          {apps.map((app, index) => (
+            <AppIcon key={index} icon={app.icon} title={app.title} />
+          ))}
+        </div>
+      </main>
+    </div>
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        {currentPage ? currentPage : (
+          <div className="app-grid">
+            {appGrid}
+          </div>
+        )}
+      </header>
+    </div>
+  );
